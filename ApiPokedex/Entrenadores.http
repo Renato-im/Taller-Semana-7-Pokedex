@@ -1,0 +1,45 @@
+
+@baseUrl = https://localhost:44396
+
+### 1. GET - Consultar todos los entrenadores
+GET {{baseUrl}}/api/entrenadores
+Accept: application/json
+
+###
+
+### 2. POST - Registrar entrenador Ash
+POST {{baseUrl}}/api/entrenadores
+Content-Type: application/json
+
+{
+    "Nombre": "Ash Ketchum",
+    "Edad": 10
+}
+
+###
+
+### 3. POST - Registrar entrenador Misty
+POST {{baseUrl}}/api/entrenadores
+Content-Type: application/json
+
+{
+    "Nombre": "Misty",
+    "Edad": 12
+}
+
+###
+
+### 4. PUT - Actualizar entrenador
+PUT {{baseUrl}}/api/entrenadores/1
+Content-Type: application/json
+
+{
+    "EntrenadorId": 1,
+    "Nombre": "Ash Ketchum",
+    "Edad": 11
+}
+
+###
+
+### 5. DELETE - Eliminar entrenador
+DELETE {{baseUrl}}/api/entrenadores/1
